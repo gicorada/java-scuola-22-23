@@ -1,0 +1,25 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class E67 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        Random generator = new Random();
+        int i, j;
+        System.out.print("Inserisci una parola: ");
+        String word = in.next();
+
+        for(int k = 0; k < word.length(); k++) {
+            String first, middle, last;
+            i = generator.nextInt(word.length());
+            j = generator.nextInt(word.length() - i) + i;
+
+            first = word.substring(0, i);
+            middle = word.substring(i, j);
+            last = word.substring(j, word.length());
+
+            word = first + word.chatAt(j) + middle + word.charAt(i) + last;
+        }
+         System.out.println(first+middle+last);
+    }
+} 
