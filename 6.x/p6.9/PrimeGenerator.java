@@ -5,37 +5,41 @@
  */
 public class PrimeGenerator implements Sequence<Integer> {
     private int max;
-    private int i = 1;
+    private int attuale;
+
     /**
      * Costruttore parametrico completo
      * @param max Numero massimo che deve essere stampato
      */
-	public PrimeGenerator(int max) {
+    public PrimeGenerator(int max) {
         this.max = max;
-	}
-	
+        attuale = 2;
+    }
+    
     /**
      * Metodo che restituisce il numero successivo nella sequenza dei numeri primi
      * @return Numero successivo nella sequenza
      */
-	public Integer next() {
-		int counter = 0;
-        int j = 1;
+    public Integer next() {
+        while (true) {
+            boolean primo = true;
 
-        while(j <= i && counter <= 2)
-        {
-            counter = 0;
-            if(i % j == 0)
-            {
-                counter++;
+            for (int i = 2; i < attuale; i++) {
+                if (attuale % i == 0) {
+                    primo = false;
+                }
             }
-            j++;
+
+            if (primo) {
+                int prossimo = attuale;
+                attuale++;
+                return prossimo;
+            }
+            attuale++;
         }
-        
-        return Integer.MIN_VALUE;
-	}
+    }
 
     public boolean hasNext() {
-        return true;
+        return attuale < max;
     }
 }
