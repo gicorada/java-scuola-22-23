@@ -118,7 +118,6 @@ public class Purse {
                 for(int i = 0; i < actualSize; i++) {
                     if(coin == other.coins[i]) {
                         copy[i] = "";
-                        break;
                     }
                 }
             }
