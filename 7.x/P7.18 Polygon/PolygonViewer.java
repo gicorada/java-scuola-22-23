@@ -1,14 +1,10 @@
 import javax.swing.JFrame;
 
 /**
- Classe che visualizza una lampadina tramite un JFrame e LampadinaComponent
- @author radaelli11353
-*/
+ * Classe che visualizza un poligono tramite un JFrame e PolygonComponent
+ * @author radaelli11353
+ */
 public class PolygonViewer {
-    /**
-     Metodo main di LampadinaViewer
-     @param args Argomenti passati all'esecuzione del programma
-    */
     public static void main(String[] args) {
         JFrame frame = new JFrame();
         
