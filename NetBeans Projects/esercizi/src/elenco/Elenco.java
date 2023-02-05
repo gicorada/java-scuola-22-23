@@ -15,6 +15,15 @@ public class Elenco <T> {
     private T[] elenco;
     private int dim;
     
+    /**
+     *
+     * @param max
+     */
+    public Elenco(int max) {
+        elenco = (T[]) new Object[max];
+        dim = 0;
+    }
+    
     public void add(T elemento) {
         if(dim == elenco.length) {
             elenco = Arrays.copyOf(elenco, dim*2);
