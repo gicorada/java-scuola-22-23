@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://schema.omg.org/spec/UML/2.1">
+  <xmi:Documentation exporter="umbrello uml modeller 2.37.3 (Applications 22.12.3) http://umbrello.kde.org" exporterVersion="2.0.4"/>
+  <uml:Model xmi:id="m1" name="Modello UML">
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="folder" name="folder"/>
+    <packagedElement xmi:type="uml:Stereotype" xmi:id="dataType" name="dataType"/>
+    <packagedElement xmi:type="uml:Model" xmi:id="Logical_View" name="Logical View">
+      <uml:Package xmi:id="Datatypes" name="Datatypes" stereotype="folder">
+        <packagedElement xmi:type="uml:DataType" xmi:id="uwLsHMZ8JW7l8" name="char"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uzO3Cg99EuTMj" name="int"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uRh9XqoWXBGYp" name="float"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="u9POPoh1NV5Cg" name="double"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uSDmh9TJZoOs3" name="bool" isActive="false"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uOBxfxryGacKR" name="string" isActive="false"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uv7th1zePfxR3" name="unsigned char" isActive="false"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="utK5MzPETG0Yq" name="signed char" isActive="false"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uax7gCqxooodn" name="unsigned int" isActive="false"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uaaohaTIYV7AK" name="signed int" isActive="false"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uNjCUerwS7haj" name="short int" isActive="false"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="u3AbUyG28fZpV" name="unsigned short int" isActive="false"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uRobSyn28xRAE" name="signed short int" isActive="false"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="ul1z7D4RtqNuL" name="long int" isActive="false"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uCOXLWCRWK0x8" name="signed long int" isActive="false"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uvXcY5zUtrRFm" name="unsigned long int" isActive="false"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uyqnJXaNpqd4p" name="long double" isActive="false"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uv2p7TuqUoF3O" name="wchar_t" isActive="false"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uz6Vb9IPgPLTI" name="boolean" stereotype="dataType"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="u5W6FZYo1An9T" name="byte" stereotype="dataType"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uRwu3aI1znwpR" name="short" stereotype="dataType"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="u7pA5Xzx1qLFd" name="long" stereotype="dataType"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="ujkqB4OKtmDb5" name="String" stereotype="dataType"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="u7QM5TX3y37tX" name="Integer" stereotype="dataType"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="ubBROUe79GD8p" name="Character" stereotype="dataType"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uGrLvGqMRErQE" name="Boolean" stereotype="dataType"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uT5xfQw6CsXfT" name="Float" stereotype="dataType"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uTpblOnF0ueOZ" name="Double" stereotype="dataType"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uQiSmTofNyJYv" name="Byte" stereotype="dataType"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="ucknpiQ3GVhQc" name="Short" stereotype="dataType"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uUjCJ6i5JOhqY" name="Long" stereotype="dataType"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="uX31vCRYgJHV7" name="StringBuffer" stereotype="dataType"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="u02tLqBGqJS39" name="StringBuilder" stereotype="dataType"/>
+      </uml:Package>
+      <packagedElement xmi:type="uml:Class" xmi:id="uYc8pdxdIZ4Fc" name="String"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="ueXqrcljkwoSR" name="Dipendente">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="ugmHtIPoU1xIl" name="matricola" visibility="private" type="uYc8pdxdIZ4Fc"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="u3u3eElpcDdPH" name="stipendio" visibility="private" type="u9POPoh1NV5Cg"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="uCWydd1AbPSm8" name="straordinario" visibility="private" type="u9POPoh1NV5Cg"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="uRSeTfHEaSblu" name="Dipendente" comment="public Dipendente(String matricola, double stipendio, double straordinario ) {&#10;    super(matricola, stipendio, straordinario);&#10;}">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="uXbzl880nh0AX" name="matricola" visibility="private" type="uYc8pdxdIZ4Fc" value=""/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="u8JhXBzwkFAcS" name="stipendio" visibility="private" type="u9POPoh1NV5Cg" value=""/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="uJwr1Ry5PXwN3" name="straordinario" visibility="private" type="u9POPoh1NV5Cg" value=""/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="uBYOVIXwt9ixv" name="getStipendio">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="uGTeSpT89iYfs" type="u9POPoh1NV5Cg" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="ufrEABFBF1z7K" name="paga">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="up3XudzmNr0eW" type="u9POPoh1NV5Cg" direction="return"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="uFTMo9vytz5D2" name="ore" visibility="private" type="uzO3Cg99EuTMj" value=""/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="uBEF7AhbmjRMC" name="toString" isOverride="true">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="uQbjf0IpylroP" type="uYc8pdxdIZ4Fc" direction="return"/>
+        </ownedOperation>
+        <packagedElement xmi:type="uml:Class" xmi:id="uPkgJJFcRA6pU" name="DipendenteA">
+          <generalization xmi:type="uml:Generalization" xmi:id="uqmTjTu2Vypz9" general="ueXqrcljkwoSR"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="uampWxf8Q4otj" name="malattia" visibility="private" type="uzO3Cg99EuTMj"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="us13LpL8qW9E0" name="DipendenteA">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="uLHc46umi90fW" name="matricola" visibility="private" type="uYc8pdxdIZ4Fc" value=""/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="uIRgKn07rQaSl" name="stipendio" visibility="private" type="u9POPoh1NV5Cg" value=""/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="u7r78W8udexKm" name="straordinario" visibility="private" type="u9POPoh1NV5Cg" value=""/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="uyN43aPeeMGO5" name="prendiMalattia">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="uraIMT0zXdesA" name="giorni" visibility="private" type="uzO3Cg99EuTMj" value=""/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="uGFQRyuG4cOGl" name="paga" comment="Ogni giorno di malattia, vengono sottratti 10€ dallo stipendio" isOverride="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="upc2FTODMdDOD" type="u9POPoh1NV5Cg" direction="return"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="udEve3IRKzqPd" name="ore" visibility="private" type="uzO3Cg99EuTMj" value=""/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="u47KT64YVLcol" name="toString" isOverride="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="u4acue64IXEQl" type="uYc8pdxdIZ4Fc" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="uPkgJJFcRA6pU" name="DipendenteA">
+        <generalization xmi:type="uml:Generalization" xmi:id="uqmTjTu2Vypz9" general="ueXqrcljkwoSR"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="uampWxf8Q4otj" name="malattia" visibility="private" type="uzO3Cg99EuTMj"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="us13LpL8qW9E0" name="DipendenteA">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="uLHc46umi90fW" name="matricola" visibility="private" type="uYc8pdxdIZ4Fc" value=""/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="uIRgKn07rQaSl" name="stipendio" visibility="private" type="u9POPoh1NV5Cg" value=""/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="u7r78W8udexKm" name="straordinario" visibility="private" type="u9POPoh1NV5Cg" value=""/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="uyN43aPeeMGO5" name="prendiMalattia">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="uraIMT0zXdesA" name="giorni" visibility="private" type="uzO3Cg99EuTMj" value=""/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="uGFQRyuG4cOGl" name="paga" comment="Ogni giorno di malattia, vengono sottratti 10€ dallo stipendio" isOverride="true">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="upc2FTODMdDOD" type="u9POPoh1NV5Cg" direction="return"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="udEve3IRKzqPd" name="ore" visibility="private" type="uzO3Cg99EuTMj" value=""/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="u47KT64YVLcol" name="toString" isOverride="true">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="u4acue64IXEQl" type="uYc8pdxdIZ4Fc" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <xmi:Extension extender="umbrello">
+        <diagrams resolution="96">
+          <diagram xmi.id="uzQv5WbjakqbL" name="diagramma delle classi" type="1" documentation="" backgroundcolor="#ffffff" fillcolor="#ffffc0" font="Noto Sans,10,-1,0,50,0,0,0,0,0" griddotcolor="#d3d3d3" linecolor="#990000" linewidth="0" textcolor="#000000" usefillcolor="1" showattribassocs="1" showatts="1" showattsig="1" showops="1" showopsig="1" showpackage="1" showpubliconly="0" showscope="1" showstereotype="2" localid="-1" showgrid="0" snapgrid="0" snapcsgrid="0" snapx="25" snapy="25" zoom="100" canvasheight="800" canvaswidth="1100" isopen="1">
+            <widgets>
+              <classwidget xmi.id="uPkgJJFcRA6pU" localid="utN4zi1eIE5Ah" textcolor="#000000" linecolor="#990000" linewidth="0" usefillcolor="1" usesdiagramfillcolor="0" usesdiagramusefillcolor="0" fillcolor="#ffffc0" font="Noto Sans,10,-1,5,50,0,0,0,0,0,Regular" autoresize="1" x="301" y="480" width="469" height="108" isinstance="0" showstereotype="2" showoperations="1" showpubliconly="0" showopsigs="601" showpackage="1" showscope="1" showattributes="1" showattsigs="601"/>
+              <classwidget xmi.id="ueXqrcljkwoSR" localid="uw3FjIH3do6xh" textcolor="#000000" linecolor="#990000" linewidth="0" usefillcolor="1" usesdiagramfillcolor="0" usesdiagramusefillcolor="0" fillcolor="#ffffc0" font="Noto Sans,10,-1,5,50,0,0,0,0,0,Regular" autoresize="1" x="292" y="167" width="460" height="144" isinstance="0" showstereotype="2" showoperations="1" showpubliconly="0" showopsigs="601" showpackage="1" showscope="1" showattributes="1" showattsigs="601"/>
+            </widgets>
+            <messages/>
+            <associations>
+              <assocwidget xmi.id="uqmTjTu2Vypz9" localid="uTyKV4meBIOPO" textcolor="none" linecolor="#990000" linewidth="0" usefillcolor="1" usesdiagramfillcolor="1" usesdiagramusefillcolor="1" fillcolor="none" font="Noto Sans,10,-1,0,50,0,0,0,0,0" autoresize="1" seqnum="" type="500" widgetaid="uPkgJJFcRA6pU" widgetbid="ueXqrcljkwoSR" indexa="0" totalcounta="0" indexb="0" totalcountb="0">
+                <linepath layout="Direct">
+                  <startpoint startx="533.029" starty="480"/>
+                  <endpoint endx="525.295" endy="311"/>
+                </linepath>
+              </assocwidget>
+            </associations>
+          </diagram>
+        </diagrams>
+      </xmi:Extension>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Model" xmi:id="Use_Case_View" name="Use Case View"/>
+    <packagedElement xmi:type="uml:Model" xmi:id="Component_View" name="Component View"/>
+    <packagedElement xmi:type="uml:Model" xmi:id="Deployment_View" name="Deployment View"/>
+    <packagedElement xmi:type="uml:Model" xmi:id="Entity_Relationship_Model" name="Entity Relationship Model"/>
+  </uml:Model>
+  <xmi:Extension extender="umbrello">
+    <docsettings viewid="uzQv5WbjakqbL" documentation="" uniqueid="u02tLqBGqJS39"/>
+    <listview>
+      <listitem id="Views" type="800" open="1">
+        <listitem id="Entity_Relationship_Model" type="836" open="1"/>
+        <listitem id="Use_Case_View" type="802" open="1"/>
+        <listitem id="Component_View" type="821" open="1"/>
+        <listitem id="Deployment_View" type="827" open="1"/>
+        <listitem id="Logical_View" type="801" open="1">
+          <listitem id="uzQv5WbjakqbL" type="807" label="diagramma delle classi" open="0"/>
+          <listitem id="ueXqrcljkwoSR" type="813" open="1">
+            <listitem id="uRSeTfHEaSblu" type="815" open="0"/>
+            <listitem id="uBYOVIXwt9ixv" type="815" open="0"/>
+            <listitem id="ugmHtIPoU1xIl" type="814" open="0"/>
+            <listitem id="ufrEABFBF1z7K" type="815" open="0"/>
+            <listitem id="u3u3eElpcDdPH" type="814" open="0"/>
+            <listitem id="uCWydd1AbPSm8" type="814" open="0"/>
+            <listitem id="uBEF7AhbmjRMC" type="815" open="0"/>
+          </listitem>
+          <listitem id="uPkgJJFcRA6pU" type="813" open="1">
+            <listitem id="us13LpL8qW9E0" type="815" open="0"/>
+            <listitem id="uampWxf8Q4otj" type="814" open="0"/>
+            <listitem id="uGFQRyuG4cOGl" type="815" open="0"/>
+            <listitem id="uyN43aPeeMGO5" type="815" open="0"/>
+            <listitem id="u47KT64YVLcol" type="815" open="0"/>
+          </listitem>
+          <listitem id="uYc8pdxdIZ4Fc" type="813" open="1"/>
+        </listitem>
+      </listitem>
+    </listview>
+    <codegeneration>
+      <codegenerator language="Java">
+        <sourcecode id="uBYOVIXwt9ixv" value="return stipendio;"/>
+        <sourcecode id="us13LpL8qW9E0" value="public DipendenteA(String matricola, double stipendio, double straordinario ) {&#10;&#9;super(matricola, stipendio, straordinario);&#10;}"/>
+        <sourcecode id="uyN43aPeeMGO5" value="malattia += giorni"/>
+      </codegenerator>
+    </codegeneration>
+  </xmi:Extension>
+</xmi:XMI>
