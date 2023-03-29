@@ -14,7 +14,7 @@ public class DataEstesa extends DataFormattata {
     public String stringaFormattata() {
         String data = "";
         
-        if(getGiorno() < 9) data += "0" + getGiorno();
+        if(getGiorno() < 10) data += "0" + getGiorno();
         else data += getGiorno();
         
         data += " ";

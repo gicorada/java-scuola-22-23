@@ -12,17 +12,27 @@ public class DataNumerica extends DataFormattata {
 
     @Override
     public String stringaFormattata() {
-        String giornoFormattato = "";
+        /*String giornoFormattato = "";
         String meseFormattato = "";
-        //String annoFormattato = "";
         
-        if(getGiorno() < 9) giornoFormattato = "0" + getGiorno();
-        else giornoFormattato += getGiorno();
+        if(getGiorno() < 10) giornoFormattato = "0";
+        giornoFormattato += getGiorno();
         
-        if(getMese() < 9) meseFormattato = "0" + getMese();
-        else meseFormattato += getMese();
+        if(getMese() < 10) meseFormattato = "0";
+        meseFormattato += getMese();
         
         return giornoFormattato + "/" + meseFormattato + "/" + getAnno();
+        */
+        
+        int g = getGiorno();
+        int m = getMese();
+        int a = getAnno();
+        
+        String res = (g<10) ? "0"+g : ""+g;
+        res += "/";
+        res += (m<10) ? "0"+m : "" + m;
+        
+        return res + a;
     }
     
 }

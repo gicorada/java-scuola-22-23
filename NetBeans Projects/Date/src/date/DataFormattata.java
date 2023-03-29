@@ -31,11 +31,9 @@ public abstract class DataFormattata implements Comparable<DataFormattata> {
     
     @Override
     public int compareTo(DataFormattata o) {
-        if(anno >= o.getAnno() && mese >= o.getMese() && giorno > o.getGiorno()) {
-            return 1;
-        } else if(anno == o.getAnno() && mese == o.getMese() && giorno == o.getGiorno()) {
-            return 0;
-        } else return -1;
+        if(this.anno != o.anno) return this.anno - o.anno;
+        if(this.mese != o.mese) return this.mese - o.mese;
+        return this.giorno - o.giorno;
     }
     
     
