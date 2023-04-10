@@ -2,14 +2,13 @@ package prodotti;
 
 import java.util.Objects;
 
-
-
 /**
- * Class Prodotti
+ * Classe che rappresenta Prodotti generici
+ * @author radaelli11353
  */
 public class Prodotti {
-    private int codiceBarre;
-    private String descrizione;
+    private final int codiceBarre;
+    private final String descrizione;
     private double prezzo;
 
     public Prodotti(int codiceBarre, String descrizione, double prezzo) {
@@ -19,29 +18,33 @@ public class Prodotti {
     }
     
     /**
-     * Get the value of codiceBarre
-     * @return the value of codiceBarre
+     * Ritorna il valore di codiceBarre
+     * @return valore di codiceBarre
      */
     public int getCodiceBarre () {
         return codiceBarre;
     }
 
     /**
-     * Get the value of descrizione
-     * @return the value of descrizione
+     * Ritorna la descrizione
+     * @return descrizione
      */
     public String getDescrizione () {
         return descrizione;
     }
 
     /**
-     * Get the value of prezzo
-     * @return the value of prezzo
+     * Ritorna il prezzo
+     * @return prezzo
      */
     public double getPrezzo () {
         return prezzo;
     }
     
+    /**
+     * Modifica il prezzo
+     * @param nuovoPrezzo Prezzo nuovo
+     */
     protected void setPrezzo(double nuovoPrezzo) {
         prezzo = nuovoPrezzo;
     }
@@ -53,21 +56,11 @@ public class Prodotti {
         prezzo = prezzo - prezzo * 0.05;
     }
 
-
-    /**
-     * 
-     * @return       String
-     */
     @Override
     public String toString() {
-        return "Prodotto[descrizione: " + descrizione + ", prezzo:" + prezzo + ", codice a barre:" + codiceBarre;
+        return "Prodotto[" + descrizione + ", prezzo:" + prezzo + ", codice a barre:" + codiceBarre + "]";
     }
 
-
-    /**
-     * @param o
-     * @return       boolean
-     */
     @Override
     public boolean equals(Object o) {
         if(o == null) return false;
