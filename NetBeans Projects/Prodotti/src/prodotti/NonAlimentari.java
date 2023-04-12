@@ -1,8 +1,8 @@
 package prodotti;
 
 /**
- *
- * @author giacomo
+ * Classe che rappresenta Prodotti non alimentari
+ * @author radaelli11353
  */
 public class NonAlimentari extends Prodotti {
     String materiale;
@@ -18,5 +18,12 @@ public class NonAlimentari extends Prodotti {
             setPrezzo(getPrezzo() - getPrezzo()* 0.1);
         }
     }
+
+    @Override
+    public String toString() {
+        return "NonAlimentari[" + getDescrizione() + ", " + getPrezzo() + "€, fatto di " + materiale + ", codice a barre " + getCodiceBarre() + "]";
+    }
+    
+    
     
 }
