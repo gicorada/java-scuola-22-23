@@ -1,11 +1,27 @@
+/*
+ * Copyright 2023 radaelli11353.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package pile;
 
 import java.util.Scanner;
 import java.util.Stack;
 
 /**
- *
- * @author giacomo
+ * Classe effettua il riempimento a inondazione per riempire un array
+ * @author radaelli11353
  */
 public class Pile {
 
@@ -13,51 +29,50 @@ public class Pile {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int[][] grid = new int[10][10];//Pair array to insert in the stack
+        int[][] grid = new int[10][10];
         
         Stack<Pair> pairs  = new Stack<>();
         for(int i=0; i<grid.length; i++){
-            for(int j=0; j<grid[i].length; j++){ //to fill up the array
+            for(int j=0; j<grid[i].length; j++){
                 grid[i][j]=0;
             }
         }
         
-        Scanner sc = new Scanner(System.in);
-        int row, column;
-        row=sc.nextInt();
-        column=sc.nextInt();
-        
-        pairs.push(new Pair(row, column));
+        Scanner in = new Scanner(System.in);
+        System.out.print("Inserisci posizione da cui iniziare flood fill (riga colonna): ");    
+        pairs.push(new Pair(in.nextInt()-1, in.nextInt()-1));
         
         int counter = 1;
         
         while(!pairs.isEmpty()) {
             Pair actual = pairs.pop();
+            int row = actual.getRow();
+            int col = actual.getColumn();
             
-            if(grid[actual.getRow()][actual.getColumn()] != 0) {
-                grid[actual.getRow()][actual.getColumn()] = counter++;
+            if(grid[row][col] == 0) {
+                grid[row][col] = counter++;
+            } 
+            
+            if(row - 1 >= 0 && grid[row-1][col] == 0) {
+                pairs.push(new Pair(row-1, col));
             }
-            
-            if(grid.length != actual.getRow()-1 && grid[actual.getRow()-1][actual.getColumn()] == 0) {
-                pairs.push(new Pair(actual.getRow()-1, actual.getColumn()));
+
+            if(row + 1 <= 9 && grid[row+1][col] == 0) {
+                pairs.push(new Pair(row+1, col));
             }
-            
-            if(grid[actual.getRow()+1][actual.getColumn()] == 0) {
-                pairs.push(new Pair(actual.getRow()+1, actual.getColumn()));
+
+            if(col - 1 >= 0 && grid[row][col-1] == 0) {
+                pairs.push(new Pair(row, col-1));
             }
-            
-            if(grid[actual.getRow()][actual.getColumn()-1] == 0) {
-                pairs.push(new Pair(actual.getRow(), actual.getColumn()-1));
-            }
-            
-            if(grid[actual.getRow()][actual.getColumn()+1] == 0) {
-                pairs.push(new Pair(actual.getRow(), actual.getColumn()+1));
+
+            if(col + 1 <= 9 && grid[row][col+1] == 0) {
+                pairs.push(new Pair(row, col+1));
             }
         }
         
         for (int[] r : grid) {
-            for (int i : r) {
-                System.out.print(i  + "\t");
+            for (int e : r) {
+                System.out.print(e  + "\t");
             }
             System.out.println("");
         }
