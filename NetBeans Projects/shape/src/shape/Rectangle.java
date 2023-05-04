@@ -1,17 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package shape;
 
 /**
  *
- * @author gicorada
+ * @author radaelli11353
  */
 public class Rectangle extends Shape {
-    private int x, y, w, h;
+    private double x;
+    private double y;
+    private double w;
+    private double h;
 
-    public Rectangle(int x, int y, int w, int h) {
+    public Rectangle(double x, double y, double w, double h) {
         this.x = x;
         this.y = y;
         this.w = w;
@@ -19,22 +18,22 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    public int width() {
+    public double width() {
         return w;
     }
 
     @Override
-    public int height() {
+    public double height() {
         return h;
     }
 
     @Override
-    public int posX() {
+    public double posX() {
         return x;
     }
 
     @Override
-    public int posY() {
+    public double posY() {
         return y;
     }
 
@@ -53,8 +52,6 @@ public class Rectangle extends Shape {
         if (o == null) return false;
         if (getClass() != o.getClass()) return false;
         Rectangle r = (Rectangle) o;
-        return w == r.w && h == r.h && x == r.x && y == r.y;
-    }
-    
-    
+        return Double.compare(r, r.w) && Double.compare(h, r.h) && Double.compare(x, r.x) && Double.compare(y, r.y);
+    } 
 }

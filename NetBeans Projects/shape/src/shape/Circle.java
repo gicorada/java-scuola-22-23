@@ -1,43 +1,41 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package shape;
 
 /**
  *
- * @author gicorada
+ * @author radaelli11353
  */
 public class Circle extends Shape {
-    private int xc, yc, r;
+    private double xc;
+    private double yc;
+    private double r;
 
-    public Circle(int xc, int yc, int r) {
+    public Circle(double xc, double yc, double r) {
         this.xc = xc;
         this.yc = yc;
         this.r = r;
     }
     
-    public void setRadius(int r) {
+    public void setRadius(double r) {
         this.r = r;
     }
 
     @Override
-    public int width() {
+    public double width() {
         return r*2;
     }
 
     @Override
-    public int height() {
+    public double height() {
         return r*2;
     }
 
     @Override
-    public int posX() {
+    public double posX() {
         return xc - r;
     }
 
     @Override
-    public int posY() {
+    public double posY() {
         return yc - r;
     }
     
@@ -55,6 +53,6 @@ public class Circle extends Shape {
         if (o == null) return false;
         if (getClass() != o.getClass()) return false;
         Circle c = (Circle) o;
-        return (xc == c.xc && yc == c.yc) && r == c.r;
+        return Double.compare(xc, c.xc) && Double.compare(yc, c.yc) && Double.compare(r, c.r);
     }
 }
