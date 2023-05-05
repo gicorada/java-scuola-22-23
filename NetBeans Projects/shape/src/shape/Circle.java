@@ -1,5 +1,8 @@
 package shape;
 
+import java.awt.Graphics2D;
+import java.awt.geom.Ellipse2D;
+
 /**
  *
  * @author radaelli11353
@@ -38,13 +41,13 @@ public class Circle extends Shape {
     public double posY() {
         return yc - r;
     }
-    
+
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 59 * hash + this.xc;
-        hash = 59 * hash + this.yc;
-        hash = 59 * hash + this.r;
+        int hash = 5;
+        hash = 83 * hash + (int) (Double.doubleToLongBits(this.xc) ^ (Double.doubleToLongBits(this.xc) >>> 32));
+        hash = 83 * hash + (int) (Double.doubleToLongBits(this.yc) ^ (Double.doubleToLongBits(this.yc) >>> 32));
+        hash = 83 * hash + (int) (Double.doubleToLongBits(this.r) ^ (Double.doubleToLongBits(this.r) >>> 32));
         return hash;
     }
 
@@ -53,6 +56,13 @@ public class Circle extends Shape {
         if (o == null) return false;
         if (getClass() != o.getClass()) return false;
         Circle c = (Circle) o;
-        return Double.compare(xc, c.xc) && Double.compare(yc, c.yc) && Double.compare(r, c.r);
+        return Double.compare(xc, c.xc) == 0 && Double.compare(yc, c.yc) == 0 && Double.compare(r, c.r) == 0;
+    }
+    
+    @Override
+    public void draw(Graphics2D g2) {
+        Ellipse2D.Double e = new Ellipse2D.Double(xc-r, yc-r, r*2, r*2);
+        
+        g2.draw(e);
     }
 }
