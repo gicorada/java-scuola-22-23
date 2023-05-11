@@ -10,14 +10,11 @@ import java.awt.geom.Line2D;
 public class TriangoloRettangolo extends Shape {
     private double b;
     private double h;
-    private double x;
-    private double y;
 
     public TriangoloRettangolo(double b, double h, double x, double y) {
-        this.b = b;
+        super(x, y);
+	this.b = b;
         this.h = h;
-        this.x = x;
-        this.y = y;
     }
 
     @Override
@@ -28,16 +25,6 @@ public class TriangoloRettangolo extends Shape {
     @Override
     public double height() {
         return h;
-    }
-
-    @Override
-    public double posX() {
-        return x;
-    }
-
-    @Override
-    public double posY() {
-        return y;
     }
 
     @Override
@@ -76,9 +63,9 @@ public class TriangoloRettangolo extends Shape {
     
     @Override
     public void draw(Graphics2D g2) {
-        Line2D.Double altezza = new Line2D.Double(x, y, x, y+h);
-        Line2D.Double base = new Line2D.Double(x, y+h, x+b, y+h);
-        Line2D.Double ipotenusa = new Line2D.Double(x, y, x+b, y+h);
+        Line2D.Double altezza = new Line2D.Double(posX(), posY(), posX(), posY()+height());
+        Line2D.Double base = new Line2D.Double(posX(), posY()+height(), posX()+width(), posY()+height());
+        Line2D.Double ipotenusa = new Line2D.Double(posX(), posY(), posX()+width(), posY()+height());
         
         g2.draw(altezza);
         g2.draw(base);

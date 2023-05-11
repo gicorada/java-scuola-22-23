@@ -57,7 +57,7 @@ public class Square extends Shape {
 
     @Override
     public void draw(Graphics2D g2) {
-        Rectangle r = new Rectangle((int)x, (int)y, (int)l, (int)l);
+        Rectangle r = new Rectangle((int)posX(), (int)posY(), (int)width(), (int)height());
         
         g2.draw(r);
     }

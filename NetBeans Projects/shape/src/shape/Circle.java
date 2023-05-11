@@ -8,13 +8,10 @@ import java.awt.geom.Ellipse2D;
  * @author radaelli11353
  */
 public class Circle extends Shape {
-    private double xc;
-    private double yc;
     private double r;
 
     public Circle(double xc, double yc, double r) {
-        this.xc = xc;
-        this.yc = yc;
+        super(xc-r, yc-r);
         this.r = r;
     }
     
@@ -30,16 +27,6 @@ public class Circle extends Shape {
     @Override
     public double height() {
         return r*2;
-    }
-
-    @Override
-    public double posX() {
-        return xc - r;
-    }
-
-    @Override
-    public double posY() {
-        return yc - r;
     }
 
     @Override
@@ -61,7 +48,7 @@ public class Circle extends Shape {
     
     @Override
     public void draw(Graphics2D g2) {
-        Ellipse2D.Double e = new Ellipse2D.Double(xc-r, yc-r, r*2, r*2);
+        Ellipse2D.Double e = new Ellipse2D.Double(posX(), posY(), width(), height());
         
         g2.draw(e);
     }
