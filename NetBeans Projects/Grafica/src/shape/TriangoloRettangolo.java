@@ -11,7 +11,7 @@ public class TriangoloRettangolo extends Shape {
     private double b;
     private double h;
 
-    public TriangoloRettangolo(double b, double h, double x, double y) {
+    public TriangoloRettangolo(double x, double y, double b, double h) {
         super(x, y);
 	this.b = b;
         this.h = h;
@@ -32,33 +32,20 @@ public class TriangoloRettangolo extends Shape {
         int hash = 3;
         hash = 53 * hash + (int) (Double.doubleToLongBits(this.b) ^ (Double.doubleToLongBits(this.b) >>> 32));
         hash = 53 * hash + (int) (Double.doubleToLongBits(this.h) ^ (Double.doubleToLongBits(this.h) >>> 32));
-        hash = 53 * hash + (int) (Double.doubleToLongBits(this.x) ^ (Double.doubleToLongBits(this.x) >>> 32));
-        hash = 53 * hash + (int) (Double.doubleToLongBits(this.y) ^ (Double.doubleToLongBits(this.y) >>> 32));
+        hash = 53 * hash + super.hashCode();
         return hash;
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        if (getClass() != obj.getClass()) {
+        TriangoloRettangolo t = (TriangoloRettangolo) o;
+        if (Double.doubleToLongBits(b) != Double.doubleToLongBits(t.b)) {
             return false;
         }
-        final TriangoloRettangolo other = (TriangoloRettangolo) obj;
-        if (Double.doubleToLongBits(this.b) != Double.doubleToLongBits(other.b)) {
-            return false;
-        }
-        if (Double.doubleToLongBits(this.h) != Double.doubleToLongBits(other.h)) {
-            return false;
-        }
-        if (Double.doubleToLongBits(this.x) != Double.doubleToLongBits(other.x)) {
-            return false;
-        }
-        return Double.doubleToLongBits(this.y) == Double.doubleToLongBits(other.y);
+        return Double.doubleToLongBits(h) != Double.doubleToLongBits(t.h);
     }
     
     @Override
