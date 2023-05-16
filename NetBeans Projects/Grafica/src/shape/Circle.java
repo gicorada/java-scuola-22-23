@@ -32,8 +32,6 @@ public class Circle extends Shape {
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 83 * hash + (int) (Double.doubleToLongBits(this.xc) ^ (Double.doubleToLongBits(this.xc) >>> 32));
-        hash = 83 * hash + (int) (Double.doubleToLongBits(this.yc) ^ (Double.doubleToLongBits(this.yc) >>> 32));
         hash = 83 * hash + (int) (Double.doubleToLongBits(this.r) ^ (Double.doubleToLongBits(this.r) >>> 32));
         return hash;
     }
@@ -43,7 +41,7 @@ public class Circle extends Shape {
         if (o == null) return false;
         if (getClass() != o.getClass()) return false;
         Circle c = (Circle) o;
-        return Double.compare(xc, c.xc) == 0 && Double.compare(yc, c.yc) == 0 && Double.compare(r, c.r) == 0;
+        return r == c.r;
     }
     
     @Override
