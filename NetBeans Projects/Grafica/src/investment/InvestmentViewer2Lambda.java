@@ -1,12 +1,13 @@
 package investment;
 
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class InvestmentViewer2 {  
+public class InvestmentViewer2Lambda {  
     private static final int FRAME_WIDTH = 400;
     private static final int FRAME_HEIGHT = 100;
 
@@ -30,7 +31,12 @@ public class InvestmentViewer2 {
 
 
         ActionListener listener = new InterestListener2(INTEREST_RATE, label);
-        button.addActionListener(listener);
+        button.addActionListener(event -> {
+            double interest = account.getBalance() * INTEREST_RATE / 100;
+            account.deposit(interest);
+            label.setText("Saldo: " + account.getBalance());
+            System.out.println(label.getText());
+        });
 
         frame.setVisible(true);
     }
